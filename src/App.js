@@ -1,9 +1,24 @@
 import React from 'react';
-import List from '../components/List.js';
+import List from './components/List.js';
 
 const App = props => {
-  const storeLists = props.lists.map(list => {
-    <List key={list.id} header={list.header} cards={list.cardIds} />
+  console.log(props);
+
+  const allCards = props.store.allCards;
+
+  const cardsList = Object.keys(allCards).map((key, value) => {
+    return (
+      <div>{key}: {value}</div>
+    )
+  });
+  console.log(cardsList);
+
+  const storeLists = props.store.lists.map(list => {
+    console.log({ list });
+
+    const cardsNeeded = list.cardIds.map(card => {
+      console.log({ card });
+    })
   });
 }
 
