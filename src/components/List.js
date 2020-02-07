@@ -7,8 +7,6 @@ const List = props => {
     return <Card key={card.id} title={card.title} content={card.content} />
   });
 
-  console.log(cardsList);
-
   return (
     <section className='List'>
       <header className='List-header'>

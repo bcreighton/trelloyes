@@ -12,7 +12,13 @@ const App = props => {
       </header>
       <div className='App-list'>
         {Object.keys(allLists).map(key => (
-          <List key={allLists[key].id} header={allLists[key].header} cards={allLists[key].cardIds} />
+          <List
+            key={allLists[key].id}
+            header={allLists[key].header}
+            cards={allLists[key].cardIds.map(cardId => {
+              return allCards[cardId];
+            })}
+          />
         ))};
       </div>
     </main>
