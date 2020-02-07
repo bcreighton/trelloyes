@@ -1,5 +1,6 @@
 import React from 'react';
 import List from './components/List.js';
+import './App.css';
 
 const App = props => {
   const allLists = props.store.lists;
