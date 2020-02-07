@@ -16,6 +16,9 @@ const List = props => {
       <div className='List-cards'>
         {cardsList}
       </div>
+      <button type="button" className="List-add-button">
+        + Add Random Card
+      </button>
     </section>
   )
 }
