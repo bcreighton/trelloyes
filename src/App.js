@@ -12,15 +12,17 @@ const App = props => {
         <h1>Trelloyes!</h1>
       </header>
       <div className='App-list'>
-        {Object.keys(allLists).map(key => (
-          <List
-            key={allLists[key].id}
-            header={allLists[key].header}
-            cards={allLists[key].cardIds.map(cardId => {
-              return allCards[cardId];
-            })}
-          />
-        ))};
+        {Object.keys(allLists).map(key => {
+          return (
+            <List
+              key={allLists[key].id}
+              header={allLists[key].header}
+              cards={allLists[key].cardIds.map(cardId => {
+                return allCards[cardId];
+              })}
+            />
+          )
+        })};
       </div>
     </main>
   )
